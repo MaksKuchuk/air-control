@@ -1,0 +1,5 @@
+RIOT/*
+!RIOT/boards/
+RIOT/boards/*
+!RIOT/boards/stm32f334c8-disco/
+
