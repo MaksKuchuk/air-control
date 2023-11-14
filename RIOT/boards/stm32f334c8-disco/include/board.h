@@ -36,28 +36,9 @@ extern "C" {
 
 #define DHT11_PIN           GPIO_PIN(PORT_B, 0)
 
-#define LED_PORT            GPIOB
-#define LED3_MASK           (1 << 6)
-#define LED4_MASK           (1 << 8)
-#define LED5_MASK           (1 << 9)
-#define LED6_MASK           (1 << 7)
+#define DISP_SLC_PIN        GPIO_PIN(PORT_A, 6)
+#define DISP_SDA_PIN        GPIO_PIN(PORT_A, 7)
 
-
-#define LED3_ON             (LED_PORT->BSRR = LED3_MASK)
-#define LED3_OFF            (LED_PORT->BSRR = (LED3_MASK << 16))
-#define LED3_TOGGLE         (LED_PORT->ODR  ^= LED3_MASK)
-
-#define LED4_ON             (LED_PORT->BSRR = LED4_MASK)
-#define LED4_OFF            (LED_PORT->BSRR = (LED4_MASK << 16))
-#define LED4_TOGGLE         (LED_PORT->ODR  ^= LED4_MASK)
-
-#define LED5_ON             (LED_PORT->BSRR = LED5_MASK)
-#define LED5_OFF            (LED_PORT->BSRR = (LED5_MASK << 16))
-#define LED5_TOGGLE         (LED_PORT->ODR  ^= LED5_MASK)
-
-#define LED6_ON             (LED_PORT->BSRR = LED6_MASK)
-#define LED6_OFF            (LED_PORT->BSRR = (LED6_MASK << 16))
-#define LED6_TOGGLE         (LED_PORT->ODR  ^= LED6_MASK)
 
 /** @} */
 

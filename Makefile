@@ -7,6 +7,8 @@ BOARD ?= stm32f334c8-disco
 # Used modules
 USEMODULE += xtimer
 USEMODULE += periph_gpio_irq
+USEMODULE += dht
+USEMODULE += fmt
 
 FEATURES_REQUIRED += periph_pwm
 
