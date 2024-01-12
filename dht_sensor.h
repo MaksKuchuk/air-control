@@ -1,5 +1,5 @@
 int init_dht(void);
 
-char[10] get_temp(void); 
+int get_temp(char* v); 
 
-char[10] get_hum(void); 
+int get_hum(char* v); 

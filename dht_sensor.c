@@ -25,9 +25,7 @@ int init_dht(void) {
     return 0;
 }
 
-int get_temp(char* v) {
-    UNUSED(v);
-
+int get_temp(void) {
     int16_t temp, hum;
     if (dht_read(&dht_dev, &temp, &hum) != DHT_OK) {
         printf("Error reading values\n");
@@ -38,25 +36,23 @@ int get_temp(char* v) {
     size_t n = fmt_s16_dfp(temp_s, temp, -1);
     temp_s[n] = '\0';
 
-    v = temp_s;
-
-    return 0;
+    return temp;
 }
 
 int get_hum(char* v) {
+    // int16_t temp, hum;
+    // if (dht_read(&dht_dev, &temp, &hum) != DHT_OK) {
+    //     printf("Error reading values\n");
+    //     return 1;
+    // }
+
+    // char hum_s[10];
+    // size_t n = fmt_s16_dfp(hum_s, hum, -1);
+    // hum_s[n] = '\0';
+
+    // v = hum_s;
+
     UNUSED(v);
-
-    int16_t temp, hum;
-    if (dht_read(&dht_dev, &temp, &hum) != DHT_OK) {
-        printf("Error reading values\n");
-        return 1;
-    }
-
-    char hum_s[10];
-    size_t n = fmt_s16_dfp(hum_s, hum, -1);
-    hum_s[n] = '\0';
-
-    v = hum_s;
 
     return 0;
 }
