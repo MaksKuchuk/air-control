@@ -11,7 +11,6 @@
 #include <stddef.h>
 #include <stdint.h>
 #include <_ansi.h>
-#include "../stm32f3xx_hal_driver/Inc/stm32f3xx_hal.h"
 
 _BEGIN_STD_C
 
@@ -36,7 +35,7 @@ _BEGIN_STD_C
 #elif defined(STM32L5)
 #include "stm32l5xx_hal.h"
 #elif defined(STM32F3)
-#include "../stm32f3xx_hal_driver/Inc/stm32f3xx_hal.h"
+#include "../hal/stm32f3xx_hal.h"
 #elif defined(STM32H7)
 #include "stm32h7xx_hal.h"
 #elif defined(STM32F7)
@@ -49,6 +48,42 @@ _BEGIN_STD_C
 #error "SSD1306 library was tested only on STM32F0, STM32F1, STM32F3, STM32F4, STM32F7, STM32L0, STM32L1, STM32L4, STM32H7, STM32G0, STM32G4, STM32WB MCU families. Please modify ssd1306.h if you know what you are doing. Also please send a pull request if it turns out the library works on other MCU's as well!"
 #endif
 
+#include "../hal/stm32f3xx_hal_rcc.c"
+#include "../hal/stm32f3xx_hal_gpio.c"
+#include "../hal/stm32f3xx_hal_exti.c"
+#include "../hal/stm32f3xx_hal_dma.c"
+#include "../hal/stm32f3xx_hal_cortex.c"
+#include "../hal/stm32f3xx_hal_adc.c"
+#include "../hal/stm32f3xx_hal_can.c"
+#include "../hal/stm32f3xx_hal_can_legacy.c"
+#include "../hal/stm32f3xx_hal_cec.c"
+#include "../hal/stm32f3xx_hal_comp.c"
+#include "../hal/stm32f3xx_hal_crc.c"
+#include "../hal/stm32f3xx_hal_dac.c"
+#include "../hal/stm32f3xx_hal_flash.c"
+#include "../hal/stm32f3xx_hal_sram.c"
+#include "../hal/stm32f3xx_hal_nor.c"
+#include "../hal/stm32f3xx_hal_nand.c"
+#include "../hal/stm32f3xx_hal_pccard.c"
+#include "../hal/stm32f3xx_hal_hrtim.c"
+#include "../hal/stm32f3xx_hal_i2c.c"
+#include "../hal/stm32f3xx_hal_i2s.c"
+#include "../hal/stm32f3xx_hal_irda.c"
+#include "../hal/stm32f3xx_hal_iwdg.c"
+#include "../hal/stm32f3xx_hal_opamp.c"
+#include "../hal/stm32f3xx_hal_pcd.c"
+#include "../hal/stm32f3xx_hal_pwr.c"
+#include "../hal/stm32f3xx_hal_rtc.c"
+#include "../hal/stm32f3xx_hal_sdadc.c"
+#include "../hal/stm32f3xx_hal_smartcard.c"
+#include "../hal/stm32f3xx_hal_smbus.c"
+#include "../hal/stm32f3xx_hal_spi.c"
+#include "../hal/stm32f3xx_hal_tim.c"
+#include "../hal/stm32f3xx_hal_tsc.c"
+#include "../hal/stm32f3xx_hal_uart.c"
+#include "../hal/stm32f3xx_hal_uart.c"
+#include "../hal/stm32f3xx_hal_usart.c"
+#include "../hal/stm32f3xx_hal_wwdg.c"
 
 #ifdef SSD1306_X_OFFSET
 #define SSD1306_X_OFFSET_LOWER (SSD1306_X_OFFSET & 0x0F)

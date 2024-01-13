@@ -1,8 +1,16 @@
 # name of your application
 APPLICATION = air_control
 
+KBUILD_CFLAGS += -Wno-error=unused-function
+
 # name of your board
 BOARD ?= stm32f334c8-disco
+
+SOURCES_DIR += hal \
+hal/Legacy
+
+C_SOURCES += hal \
+hal/Legacy
 
 # Used modules
 USEMODULE += xtimer

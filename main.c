@@ -1,8 +1,7 @@
 #include <xtimer.h>
 #include <board.h>
 #include <stdio.h>
-#include "ssd1306/ssd1306.h`"
-
+#include "ssd1306/ssd1306.c"
 
 int main(void) {
     ssd1306_Init();
