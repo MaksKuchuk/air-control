@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "cstdint": "cpp",
+        "xtimer.h": "c",
+        "stm32f3xx_hal.h": "c",
+        "ssd1306.h": "c",
+        "math.h": "c",
+        "stm32f3xx_hal_gpio.h": "c",
+        "board.h": "c",
+        "cpu.h": "c",
+        "ds18.h": "c",
+        "dht_sensor.h": "c",
+        "stdint.h": "c"
+    }
+}
