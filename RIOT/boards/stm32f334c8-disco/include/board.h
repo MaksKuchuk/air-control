@@ -36,7 +36,7 @@ extern "C" {
 
 #define DHT11_PIN           GPIO_PIN(PORT_B, 0)
 
-#define DISP_SLC_PIN        GPIO_PIN(PORT_A, 6)
+#define DISP_SCL_PIN        GPIO_PIN(PORT_A, 6)
 #define DISP_SDA_PIN        GPIO_PIN(PORT_A, 7)
 
 
