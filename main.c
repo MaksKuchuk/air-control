@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <periph/gpio.h>
 #include "dht_sensor.h"
-#include "ssd1306-driver/ssd1306.h"
+// #include "ssd1306-driver/ssd1306.h"
 
 
 int main(void) {
@@ -19,7 +19,7 @@ int main(void) {
         
         // printf("%d", v);
 
-        SSD1306_Init(DISP_SDA_PIN);
+        // SSD1306_Init(DISP_SDA_PIN);
 
 
 
